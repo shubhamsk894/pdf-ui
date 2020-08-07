@@ -13,14 +13,15 @@ const useStyles = makeStyles((theme) => ({
     padding: "2px 4px",
     display: "flex",
     alignItems: "center",
-    width: 400
+    width: 500
   },
   input: {
     marginLeft: theme.spacing(1),
     flex: 1
   },
   iconButton: {
-    padding: 10
+    padding: 10,
+    color: "#4caf50"
   },
   divider: {
     height: 28,
@@ -38,16 +39,12 @@ export default function CustomizedInputBase() {
       </IconButton> */}
       <InputBase
         className={classes.input}
-        placeholder="Search Google Maps"
+        placeholder="Search PDFs"
         inputProps={{ "aria-label": "search google maps" }}
       />
 
       <Divider className={classes.divider} orientation="vertical" />
-      <IconButton
-        // type="submit"
-        className={classes.iconButton}
-        aria-label="search"
-      >
+      <IconButton className={classes.iconButton} aria-label="search">
         <SearchIcon />
       </IconButton>
       {/* <IconButton
