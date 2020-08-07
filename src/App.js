@@ -5,7 +5,9 @@ import MainLayout from "./layout/MainLayout";
 export default function App() {
   return (
     <div className="App">
-      <MainLayout />
+      <MainLayout>
+        <div>Hello</div>
+      </MainLayout>
     </div>
   );
 }
