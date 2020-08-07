@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css";
 import MainLayout from "./layout/MainLayout";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import SearchPage from "./pages/SearchPage";
 import PDFList from "./pages/PDFList";
 import Categories from "./pages/Categories";
@@ -14,6 +14,7 @@ export default function App() {
           <Route path="/search" component={SearchPage} />
           <Route path="/pdfs" component={PDFList} />
           <Route path="/categories" component={Categories} />
+          <Redirect from="/" to="/search" />
         </Switch>
       </MainLayout>
     </div>

@@ -18,7 +18,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import NotificationsNoneIcon from "@material-ui/icons/NotificationsNone";
 import { NAVMENU } from "../constants/NAVMENU";
-
+import { Link } from "react-router-dom";
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -83,6 +83,9 @@ const useStyles = makeStyles((theme) => ({
     ...theme.mixins.toolbar
   },
   endButton: { marginRight: theme.spacing(2) },
+  link: {
+    textDecoration: "none"
+  },
   content: {
     flexGrow: 1,
 
@@ -167,16 +170,16 @@ export default function MenuDrawer({ children }) {
             )}
           </IconButton>
         </div>
-        <Divider />
+        {/* <Divider /> */}
         <List>
           {NAVMENU.map((item) => (
-            <ListItem button key={item.title}>
+            <ListItem button component={Link} to={item.path} key={item.title}>
               <ListItemIcon>{item.icon}</ListItemIcon>
               <ListItemText primary={item.title} />
             </ListItem>
           ))}
         </List>
-        <Divider />
+        {/* <Divider /> */}
       </Drawer>
       <main className={classes.content}>
         <div className={classes.toolbar} />
