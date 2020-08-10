@@ -10,3 +10,12 @@ body {
 div.MuiPaper-root > div.makeStyles-toolbar-14 {
   background-color: #455a64;
 }
+
+a.makeStyles-active-5 > .MuiListItemIcon-root {
+  fill: #fff;
+  color: #fff;
+}
+
+.makeStyles-toolbar-14 > .MuiButtonBase-root > .MuiIconButton-label {
+  color: #fff;
+}
